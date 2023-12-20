@@ -1,0 +1,114 @@
+body {
+  background: #001F3F;
+.sidebar {
+  width: 250px;
+  height: 100%;
+  background: #00FFB7;
+  color: #FFFFFF;
+  position: fixed;
+  transition: 0.3s;
+}
+
+.sidebar .logo {
+  padding: 20px;
+  text-align: center;
+}
+
+.sidebar .logo img {
+  max-width: 100px;
+}
+
+.sidebar .menu-items {
+  padding-top: 50px;
+  text-align: center;
+}
+
+.sidebar .menu-items a {
+  display: block;
+  padding: 10px;
+  color: #FFFFFF;
+  text-decoration: none;
+  transition: 0.2s;
+}
+
+.sidebar .menu-items a:hover {
+  background: #00df9a;
+}
+
+.content {
+  margin-left: 250px;
+  padding: 20px;
+}
+/* Přidáme nové styly pro tlačítko a responzivní design */
+
+/* Styl tlačítka pro otevření/zavření sidebaru */
+.open-button {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  font-size: 30px;
+  cursor: pointer;
+  z-index: 1;
+}
+
+/* Media query pro responzivní design */
+@media screen and (max-width: 768px) {
+  .sidebar {
+      width: 0; /* Při menším zařízení zavřený sidebar */
+  }
+
+  .content {
+      margin-left: 0; /* Při menším zařízení obsah na celou šířku */
+  }
+
+  /* Tlačítko se zobrazí pouze při menším zařízení */
+  .open-button {
+      display: block;
+  }
+}
+/* Zde ponechte předchozí styly */
+
+.sidebar {
+  /* Přidejte tento styl pro zásuvný efekt */
+  width: 0;
+  overflow: hidden;
+  transition: width 0.3s;
+}
+
+.sidebar.open {
+  width: 250px;
+}
+
+/* Zde ponechte zbytek předchozích stylů */
+/* Úprava barev a velikosti textu */
+
+.sidebar {
+  width: 300px; /* Zvětšení šířky sidebaru */
+  max-width: 80%; /* Omezení šířky pro responzivitu */
+  overflow: hidden;
+  transition: width 0.3s;
+  background: #162e50;
+  color: #FFFFFF;
+  position: fixed;
+  top: 0;
+  left: -300px; /* Záporná hodnota šířky sidebaru pro zásuvný efekt */
+}
+
+.sidebar.open {
+  left: 0; /* Při otevření posuneme sidebar do viditelné oblasti */
+}
+
+/* Úprava velikosti textu v menu */
+.sidebar .menu-items a {
+  display: block;
+  padding: 20px; /* Zvětšení výšky tlačítka pro pohodlnější klikání */
+  font-size: 20px; /* Zvětšení velikosti textu */
+  color: #FFFFFF;
+  text-decoration: none;
+  transition: 0.2s;
+}
+
+.sidebar .menu-items a:hover {
+  background: #00985a;
+}
+}
